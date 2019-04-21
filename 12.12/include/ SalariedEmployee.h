@@ -1,0 +1,18 @@
+#ifndef SALARIED_H
+#define SALARIED_H
+
+#include "Employee.h"
+class SalariedEmployee : public Employee
+{
+public:
+   SalariedEmployee( const string &, const string &,
+      const string &, int, int, int, double = 0.0 );
+
+   void setWeeklySalary( double );
+   double getWeeklySalary() const;
+
+   virtual void print() const;
+   double weeklySalary;
+};
+#endif
+
